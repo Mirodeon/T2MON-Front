@@ -1,9 +1,15 @@
 import React from "react";
-import axios from "axios";
+/*import axios from "axios";*/
+import cv from "../../pdf/CV.pdf";
 
 const HomeContact = () => {
+  
   const handleCV = () => {
-    let fileDownload = require("js-file-download");
+    /*The chosen deployment formula offers an ephemeral filesystem. 
+    This means that media files won't persistent and might vanish when the app shuts down or is redeployed.
+    Downloading from the database is therefore not an option.*/
+
+    /*let fileDownload = require("js-file-download");
     axios
       .get(process.env.REACT_APP_API_URL + "/download/", {
         responseType: "blob",
@@ -13,7 +19,17 @@ const HomeContact = () => {
       })
       .catch((err) => {
         console.log(err);
-      });
+      });*/
+
+    const downloadFile = () => {
+      let link = document.createElement("a");
+      link.href = cv;
+      link.download = "CV - Developer - Mehdi Habaru.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+    downloadFile();
   };
   return (
     <ul className="contact_container">
