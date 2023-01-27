@@ -1,0 +1,214 @@
+.container_spell_fight {
+    width: 69%;
+    box-sizing: border-box;
+    color: black;
+    padding: 10px 20px;
+    border-right: 5px solid black;
+    border-radius: 0px 25px 25px 0px;
+    margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    filter: drop-shadow(0px 0px 5px cyan);
+    animation: 1.5s ease-out 0s 1 movFromLeft;
+    position: relative;
+    overflow: hidden;
+
+    @include break800px {
+        width: 54%;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px;
+        border-right: 2px solid black;
+    }
+
+    &.fade_out {
+        transition: opacity 0.7s ease-in 0s;
+        opacity: 0;
+    }
+
+    .item_spell_fight {
+        width: 50%;
+        height: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+
+        @include break800px {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            filter: drop-shadow(0px 0px 10px cyan);
+
+            .name_spell_fight {
+                border-top: 5px solid cyan;
+                border-left: 5px solid cyan;
+                border-bottom: 5px solid cyan;
+                border-radius: 10px 5px 5px 10px;
+                padding: 3px 10px 3px 5px;
+
+                @include break800px {
+                    padding: 0px 0px;
+                    border-radius: initial;
+                    border-top: initial;
+                    border-left: initial;
+                    border-bottom: initial;
+                }
+
+                @include break600hpx {
+                    padding: 0px 0px;
+                    border-radius: initial;
+                    border-top: initial;
+                    border-left: initial;
+                    border-bottom: initial;
+                }
+            }
+
+            @include break800px {
+                transform: scale(1.1);
+                background: cyan;
+                border-radius: 25px;
+            }
+        }
+
+        .name_spell_fight {
+            font-size: 14px;
+            padding: 8px 10px;
+
+            @include break800px {
+                font-size: 7px;
+                padding: 0px 0px;
+            }
+        }
+
+        .container_info_spell_fight {
+            display: flex;
+            gap: 5px;
+            padding: 5px 10px;
+            padding-left: 0px;
+
+            @include break800px {
+                gap: 2px;
+                padding: 0px 0px;
+            }
+
+            @include break600hpx {
+                gap: 2px;
+                padding: 0px 0px;
+            }
+
+            .mana_spell_fight {
+                font-size: 8px;
+                box-sizing: border-box;
+                background: rgba(0, 0, 190, 0.3);
+                border: 2px solid rgb(0, 0, 190);
+                border-radius: 50%;
+                color: azure;
+                width: 20px;
+                height: 20px;
+                padding: 4px 0px;
+                text-align: center;
+                filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+
+                @include break800px {
+                    font-size: 5px;
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                @include break600hpx {
+                    font-size: 5px;
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                &.not_enough {
+                    background: rgb(175, 0, 0, 0.3);
+                    border: 2px solid rgb(175, 0, 0);
+                    filter: drop-shadow(0px 0px 2px rgb(175, 0, 0));
+                }
+            }
+
+            .type_spell_fight {
+                border-radius: 50%;
+                box-sizing: border-box;
+                width: 20px;
+                height: 20px;
+
+                @include break800px {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                @include break600hpx {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                &.Darkness {
+                    border: 2px solid $darkness;
+                    background: $darknessLight;
+                    filter: drop-shadow(0px 0px 2px $darkness);
+                }
+
+                &.Earth {
+                    border: 2px solid $earth;
+                    background: $earthLight;
+                    filter: drop-shadow(0px 0px 2px $earth);
+                }
+
+                &.Fire {
+                    border: 2px solid $fire;
+                    background: $fireLight;
+                    filter: drop-shadow(0px 0px 2px $fire);
+                }
+
+                &.Ice {
+                    border: 2px solid $ice;
+                    background: $iceLight;
+                    filter: drop-shadow(0px 0px 2px $ice);
+                }
+
+                &.Light {
+                    border: 2px solid $light;
+                    background: $lightLight;
+                    filter: drop-shadow(0px 0px 2px $light);
+                }
+
+                &.Neutral {
+                    border: 2px solid $neutral;
+                    background: $neutralLight;
+                    filter: drop-shadow(0px 0px 2px $neutral);
+                }
+
+                &.Physic {
+                    border: 2px solid $physic;
+                    background: $physicLight;
+                    filter: drop-shadow(0px 0px 2px $physic);
+                }
+
+                &.Water {
+                    border: 2px solid $water;
+                    background: $waterLight;
+                    filter: drop-shadow(0px 0px 2px $water);
+                }
+
+                &.Wind {
+                    border: 2px solid $wind;
+                    background: $windLight;
+                    filter: drop-shadow(0px 0px 2px $wind);
+                }
+            }
+        }
+    }
+}

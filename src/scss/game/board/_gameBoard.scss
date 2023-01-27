@@ -1,0 +1,118 @@
+.container_character {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    z-index: 1;
+
+    @include break800px {
+        width: 40px;
+        height: 40px;
+    }
+
+    .img_character {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.container_board_game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    left: calc(50% - 0px);
+    top: calc(50% - 0px);
+    transform: translate(-50%, -50%);
+
+    .container_map_game {
+        display: flex;
+        width: 750px;
+        height: 350px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        background-image: url("../img/gameBoard/grass.png");
+        background-size: 50px 50px;
+
+
+        @include break800px {
+            width: 600px;
+            height: 280px;
+            background-size: 40px 40px;
+        }
+
+        .mapSquare {
+            min-width: 50px;
+            max-height: 50px;
+            box-sizing: border-box;
+
+            @include break800px {
+                min-width: 40px;
+                max-height: 40px;
+            }
+
+            &.water {
+                background-color: lightblue;
+                background-image: url("../img/gameBoard/water.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.tree {
+                background-image: url("../img/gameBoard/tree.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.sand {
+                background-color: rgb(172, 154, 74);
+                background-image: url("../img/gameBoard/sand.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.path {
+                background-image: url("../img/gameBoard/path.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.tallGrass {
+                background-image: url("../img/gameBoard/tallGrass.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.building {
+                background-color: grey;
+                background-image: url("../img/gameBoard/woodPlank.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.door {
+                background-color: grey;
+                background-image: url("../img/gameBoard/door.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.roof {
+                background-color: grey;
+                background-image: url("../img/gameBoard/woodBrick.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}

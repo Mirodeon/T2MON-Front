@@ -1,0 +1,244 @@
+.container_merchant {
+    height: calc(28vh - 50.4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: 0.7s ease-in 0s 1 opacit;
+    width: 100%;
+    gap: 5px;
+
+    @include break600hpx {
+        height: calc(28vh - 37.8px);
+    }
+
+    .container_arrow_merchant {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 10px;
+
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+
+            .arrow_merchant {
+                filter: drop-shadow(0px 0px 10px cyan);
+
+                &.prev {
+                    border-right: 24px solid cyan;
+                }
+
+                &.next {
+                    border-left: 24px solid cyan;
+                }
+            }
+        }
+
+        .arrow_merchant {
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            &.prev {
+                border-right: 24px solid rgba(0, 255, 255, 0.5);
+            }
+
+            &.next {
+                border-left: 24px solid rgba(0, 255, 255, 0.5);
+
+            }
+        }
+    }
+
+    .container_details_merchant {
+        box-sizing: border-box;
+        width: 50%;
+        height: 120px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+
+        @include break800px {
+            width: 70%;
+            height: 75px;
+        }
+
+        @include break600hpx {
+            height: 50px;
+        }
+
+        .header_merchant {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: relative;
+
+            @include break800px {
+                gap: 0px;
+            }
+
+            .container_img_merchant {
+                width: 50px;
+                height: 50px;
+                box-sizing: border-box;
+                background: black;
+                border-radius: 50%;
+                filter: drop-shadow(0px 0px 5px cyan);
+                position: relative;
+
+                @include break800px {
+                    transform: scale(0.7);
+                }
+
+                .img_merchant {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0px;
+                }
+
+                .amount_sell_merchant {
+                    filter: drop-shadow(0px 0px 5px cyan);
+                    position: absolute;
+                    bottom: 0px;
+                    left: 40px;
+                    font-size: 16px;
+
+                    @include break800px {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .name_merchant {
+                filter: drop-shadow(0px 0px 5px cyan);
+                font-size: 16px;
+
+                @include break800px {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .container_info_merchant {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            padding: 15px 40px 15px 0px;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            @include break800px {
+                gap: 0px;
+            }
+
+            .description_merchant {
+                font-size: 10px;
+
+                @include break800px {
+                    font-size: 6px;
+                }
+            }
+
+            .container_cost_merchant {
+                width: 75px;
+                min-height: 35px;
+                filter: drop-shadow(0px 0px 5px cyan);
+                box-sizing: border-box;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 20px;
+                color: azure;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                padding: 0px 10px;
+                align-self: flex-end;
+
+                @include break800px {
+                    transform: scale(0.5);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                @include break600hpx {
+                    transform: scale(0.5);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .container_img_gold_merchant {
+                    width: 15px;
+                    height: 15px;
+
+                    .img_gold_merchant {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .cost_merchant {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .container_confirm_merchant {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        @include break800px {
+            gap: 5px;
+        }
+
+        .confirm_merchant {
+            box-sizing: border-box;
+            padding: 8px 20px;
+            min-width: 110px;
+            font-size: 16px;
+            border: 3px solid rgba(0, 255, 255, 0.5);
+            border-radius: 15px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            background: rgba(0, 0, 0, 0.5);
+            color: black;
+            transition: all 0.3s ease-in 0s;
+            text-align: center;
+
+            @include break800px {
+                min-width: 30%;
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 10px cyan);
+            }
+        }
+    }
+}

@@ -1,0 +1,193 @@
+.container_bag_start {
+    height: calc(28vh - 50.4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+    @include break600hpx {
+        height: calc(28vh - 37.8px);
+    }
+
+    .container_arrow_bag_start {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 10px;
+
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+
+            .arrow_bag_start {
+                filter: drop-shadow(0px 0px 10px cyan);
+
+                &.prev {
+                    border-right: 24px solid cyan;
+                }
+
+                &.next {
+                    border-left: 24px solid cyan;
+                }
+            }
+        }
+
+        .arrow_bag_start {
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            &.prev {
+                border-right: 24px solid rgba(0, 255, 255, 0.5);
+            }
+
+            &.next {
+                border-left: 24px solid rgba(0, 255, 255, 0.5);
+
+            }
+        }
+    }
+
+    .container_details_bag_start {
+        box-sizing: border-box;
+        width: 50%;
+        height: 120px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+
+        @include break800px {
+            width: 70%;
+            height: 75px;
+        }
+
+        @include break600hpx {
+            height: 50px;
+        }
+
+        .header_bag_start {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: relative;
+
+            @include break800px {
+                gap: 0px;
+            }
+
+
+            .container_img_bag_start {
+                width: 50px;
+                height: 50px;
+                box-sizing: border-box;
+                background: black;
+                border-radius: 50%;
+                filter: drop-shadow(0px 0px 5px cyan);
+                position: relative;
+
+                @include break800px {
+                    transform: scale(0.7);
+                }
+
+                .img_bag_start {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0px;
+                }
+
+
+
+                .amount_bag_start {
+                    filter: drop-shadow(0px 0px 5px cyan);
+                    position: absolute;
+                    bottom: 0px;
+                    left: 40px;
+                    font-size: 16px;
+
+                    @include break800px {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .name_bag_start {
+                filter: drop-shadow(0px 0px 5px cyan);
+                font-size: 16px;
+
+                @include break800px {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .description_bag_start {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 0px 5px cyan);
+            padding: 20px 50px 20px 0px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+
+            @include break800px {
+                font-size: 6px;
+            }
+        }
+    }
+
+    .container_confirm_bag_start {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        @include break800px {
+            gap: 5px;
+        }
+
+        .confirm_start_bag {
+            box-sizing: border-box;
+            padding: 8px 20px;
+            font-size: 16px;
+            border: 3px solid rgba(0, 255, 255, 0.5);
+            border-radius: 15px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            background: rgba(0, 0, 0, 0.5);
+            color: black;
+            transition: all 0.3s ease-in 0s;
+            min-width: 110px;
+            text-align: center;
+
+            @include break800px {
+                min-width: 30%;
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 10px cyan);
+            }
+        }
+    }
+}

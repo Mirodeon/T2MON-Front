@@ -1,0 +1,23 @@
+.txt_article_wiki {
+    .container_mon_start {
+        height: 175px;
+        margin-bottom: 20px;
+
+        .container_info_mon_start {
+            min-width: 375px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            @include break800px {
+                min-width: initial;
+                height: 120px;
+            }
+
+            .container_pres_mon_start {
+                .container_img_mon_start {
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}

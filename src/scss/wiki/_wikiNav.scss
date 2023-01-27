@@ -1,0 +1,31 @@
+.wiki_page_nav {
+    position: absolute;
+    left: 50%;
+    top: 65px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 0px 5px cyan);
+    box-sizing: border-box;
+    animation: 1.5s ease-out 0s 1 turnOn;
+    z-index: 5;
+    max-width: 800px;
+    min-height: 60px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-radius: 10px 10px 30px 30px;
+
+    @include break600hpx {
+        min-height: 45px;
+        top: 50px;
+    }
+
+    .nav_btn {
+        @include break800px {
+            padding: 6px;
+            min-width: 30px;
+        }
+    }
+}

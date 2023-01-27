@@ -1,0 +1,50 @@
+@import "reset.css";
+@import url('https://fontlibrary.org//face/xolonium');
+@import "./partials/partials";
+@import "./animation/animation";
+@import "./partials/navBtn";
+@import "./header/header";
+@import "./game/game";
+@import "./home/home";
+@import "./wiki/wiki";
+@import "./profile/profile";
+@import "./form/form";
+
+#root {
+    font-family: 'XoloniumRegular';
+    background: radial-gradient(grey, black);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.7);
+    @include scrollBar;
+}
+
+button {
+    background: initial;
+    font-family: 'XoloniumRegular';
+    border: none;
+}
+
+input {
+    font-family: inherit;
+
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+
+    &:-webkit-autofill::first-line,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        font-family: inherit;
+        background: transparent;
+    }
+}

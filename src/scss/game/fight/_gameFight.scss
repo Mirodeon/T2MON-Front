@@ -1,0 +1,339 @@
+.container_game_fight {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(60vh - 108px);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    z-index: 4;
+    filter: drop-shadow(0px 0px 10px cyan);
+    color: azure;
+    animation: 0.7s ease-in 0s 1 opacit;
+
+    @include break600hpx {
+        height: calc(60vh - 81px);
+    }
+
+    &.fade_out {
+        transition: opacity 0.7s ease-in 0s;
+        opacity: 0;
+    }
+
+    .container_item_game_fight {
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(43vh - 77.4px);
+        position: relative;
+
+        @include break600hpx {
+            height: calc(43vh - 58.05px);
+        }
+
+        .item_game_fight {
+            width: 30%;
+            height: calc(13vh - 23.4px);
+            filter: drop-shadow(0px 0px 5px cyan);
+            box-sizing: border-box;
+            background-color: black;
+            color: azure;
+            transition: all 0.3s ease-in 0s;
+            display: flex;
+            position: absolute;
+            animation: 0.7s ease-in 0s 1 opacit;
+            padding: calc(1.7vh - 3.06px) 4%;
+
+            @include break800px {
+                width: 50%;
+            }
+
+            @include break600hpx {
+                height: calc(13vh - 17.55px);
+                padding: calc(1.7vh - 2.295px) 4%;
+            }
+
+            &.opponent {
+                border-radius: 25px 35px 35px 25px;
+                top: calc(2vh - 3.6px);
+                left: 10%;
+
+                @include break800px {
+                    left: 5%;
+                }
+
+                @include break600hpx {
+                    top: calc(2vh - 2.7px);
+                }
+            }
+
+            &.self {
+                border-radius: 35px 25px 25px 35px;
+                bottom: calc(2vh - 3.6px);
+                right: 10%;
+
+                @include break800px {
+                    right: 5%;
+                }
+
+                @include break600hpx {
+                    bottom: calc(2vh - 2.7px);
+                }
+            }
+
+            &.fade_out {
+                transition: opacity 0.7s ease-in 0s;
+                opacity: 0;
+            }
+
+            .container_info_game_fight {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: calc(1.5vh - 2.7px);
+
+                @include break600hpx {
+                    gap: calc(1.5vh - 2.025px);
+                }
+
+                .container_details_game_fight {
+                    width: 100%;
+                    height: calc(3.4vh - 6.12px);
+                    position: relative;
+
+                    @include break600hpx {
+                        height: calc(3.4vh - 4.59px);
+                    }
+
+                    .name_game_fight {
+                        bottom: 0px;
+                        left: 0px;
+                        font-size: calc(3vh - 5.4px);
+                        position: absolute;
+
+                        @include break800px {
+                            font-size: calc(2vh - 3.6px);
+                            width: 50%;
+                        }
+
+                        @include break600hpx {
+                            font-size: calc(3vh - 4.05px);
+                        }
+                    }
+
+                    .lvl_game_fight {
+                        right: 0px;
+                        bottom: 0px;
+                        font-size: calc(1.7vh - 3.06px);
+                        position: absolute;
+
+                        @include break600hpx {
+                            font-size: calc(1.7vh - 2.295px);
+                        }
+                    }
+                }
+
+                .container_ressource_game_fight {
+                    margin-left: 10%;
+
+                    .ressource_bar_game_fight {
+                        width: 100%;
+                        height: calc(1.7vh - 3.06px);
+                        box-sizing: border-box;
+                        background-color: rgb(60, 60, 60);
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        position: relative;
+
+                        @include break600hpx {
+                            height: calc(1.7vh - 2.295px);
+                        }
+
+                        .pv_bar_game_fight {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgb(175, 0, 0);
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                            filter: drop-shadow(0px 0px 2px rgb(175, 0, 0));
+                            transition: width 0.3s ease-in 0s;
+                        }
+
+                        .mana_bar_game_fight {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgb(0, 0, 190);
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                            filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+                            transition: width 0.3s ease-in 0s;
+                        }
+
+                        .numeric_ressource_game_fight {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            text-align: center;
+                            font-size: calc(1.5vh - 2.7px);
+
+                            @include break600hpx {
+                                font-size: calc(1.5vh - 2.025px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .container_img_game_fight {
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            box-sizing: border-box;
+            position: absolute;
+            animation: 0.7s ease-in 0s 1 opacit;
+
+            @include break800px {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include break600hpx {
+                width: 40px;
+                height: 40px;
+            }
+
+            .img_game_fight {
+                /*width: 100%;*/
+                height: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+
+            &.opponent {
+                top: calc(2vh - 3.6px);
+                right: 20%;
+
+                @include break800px {
+                    right: 10%;
+                }
+
+                @include break600hpx {
+                    top: calc(2vh - 2.7px);
+                }
+            }
+
+            &.self {
+                bottom: calc(2vh - 3.6px);
+                left: 20%;
+
+                @include break800px {
+                    left: 10%;
+                }
+
+                @include break600hpx {
+                    bottom: calc(2vh - 2.7px);
+                }
+            }
+
+            &.fade_out {
+                transition: opacity 0.7s ease-in 0s;
+                opacity: 0;
+            }
+        }
+    }
+
+    .container_interface_fight {
+        box-sizing: border-box;
+        width: 80%;
+        height: calc(15vh - 27px);
+        background: rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0px 0px 5px cyan);
+        border-radius: 25px;
+        margin: 0 auto;
+        border: 5px solid black;
+        display: flex;
+        overflow: hidden;
+
+        @include break800px {
+            width: 95%;
+            border: 2px solid black;
+        }
+
+        @include break600hpx {
+            height: calc(15vh - 20.25px);
+        }
+
+        .container_text_fight {
+            width: 70%;
+            box-sizing: border-box;
+            color: black;
+            padding: 10px 10px;
+            font-size: 14px;
+            @include scrollBar;
+
+            @include break800px {
+                width: 55%;
+                font-size: 10px;
+            }
+
+            .blink {
+                animation: 1.5s ease-out 0s infinite opacit;
+            }
+
+        }
+
+        .container_interact_fight {
+            width: 30%;
+            box-sizing: border-box;
+            border-left: 5px solid black;
+            border-radius: 25px 0px 0px 25px;
+            display: flex;
+            flex-wrap: wrap;
+            filter: drop-shadow(0px 0px 5px cyan);
+            padding: 10px 15px;
+            overflow: hidden;
+
+            @include break800px {
+                width: 45%;
+                border-left: 2px solid black;
+            }
+
+            @include break600hpx {
+                padding: 0 0;
+            }
+
+            &.fade_out {
+                transition: opacity 0.7s ease-in 0s;
+                opacity: 0;
+            }
+
+            .item_interact_fight {
+                width: 50%;
+                height: 50%;
+                text-align: center;
+                padding: 6px 0px;
+                font-size: 18px;
+                box-sizing: border-box;
+                color: black;
+                font-weight: bold;
+
+                @include break800px {
+                    font-size: 10px;
+                }
+
+                &:hover,
+                &.active {
+                    cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                    filter: drop-shadow(0px 0px 10px cyan);
+                    transform: scale(1.1);
+                    background: cyan;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

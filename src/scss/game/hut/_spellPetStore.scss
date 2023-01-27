@@ -1,0 +1,223 @@
+.container_spell_pet_store {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /*filter: drop-shadow(0px 0px 5px cyan);*/
+    padding: 10px 40px 10px 0px;
+
+    @include break800px {
+        gap: 1px;
+        padding: 0px 10px 0px 0px;
+    }
+
+    @include break600hpx {
+        gap: 1px;
+        padding: 0px 10px 0px 0px;
+    }
+
+    .spell_pet_store {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        .name_spell_pet_store {
+            font-size: 10px;
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            @include break800px {
+                font-size: 6px;
+            }
+
+            @include break600hpx {
+                font-size: 6px;
+            }
+        }
+
+        .container_info_spell_pet_store {
+            display: flex;
+            font-size: 8px;
+            text-align: center;
+            gap: 3px;
+
+            @include break800px {
+                gap: 1px;
+                font-size: 6px;
+            }
+
+            @include break600hpx {
+                gap: 1px;
+                font-size: 6px;
+            }
+
+            .mana_spell_pet_store {
+                box-sizing: border-box;
+                background: rgba(0, 0, 190, 0.3);
+                border: 2px solid rgb(0, 0, 190);
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                padding: 4px 0px;
+                filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+
+                @include break800px {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                @include break600hpx {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+            }
+
+            .effect_spell_pet_store {
+                border-radius: 50%;
+                box-sizing: border-box;
+                width: 20px;
+                height: 20px;
+                padding: 4px 0px;
+
+                @include break800px {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                @include break600hpx {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                &.PV {
+                    border: 2px solid rgb(175, 0, 0);
+                    background: rgb(175, 0, 0, 0.3);
+                    filter: drop-shadow(0px 0px 2px rgb(175, 0, 0));
+                }
+
+                &.Mana {
+                    border: 2px solid rgb(0, 0, 190);
+                    background: rgba(0, 0, 190, 0.3);
+                    filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+                }
+
+                &.PVandMana {
+                    border: 2px solid rgba(128, 0, 128);
+                    background: rgba(128, 0, 128, 0.3);
+                    filter: drop-shadow(0px 0px 2px rgba(128, 0, 128));
+                }
+            }
+
+            .type_spell_pet_store {
+                border-radius: 50%;
+                box-sizing: border-box;
+                width: 20px;
+                height: 20px;
+                padding: 4px 0px;
+
+                @include break800px {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                @include break600hpx {
+                    width: 10px;
+                    height: 10px;
+                    padding: 0px 0px;
+                }
+
+                &.Darkness {
+                    border: 2px solid $darkness;
+                    background: $darknessLight;
+                    filter: drop-shadow(0px 0px 2px $darkness);
+                }
+
+                &.Earth {
+                    border: 2px solid $earth;
+                    background: $earthLight;
+                    filter: drop-shadow(0px 0px 2px $earth);
+                }
+
+                &.Fire {
+                    border: 2px solid $fire;
+                    background: $fireLight;
+                    filter: drop-shadow(0px 0px 2px $fire);
+                }
+
+                &.Ice {
+                    border: 2px solid $ice;
+                    background: $iceLight;
+                    filter: drop-shadow(0px 0px 2px $ice);
+                }
+
+                &.Light {
+                    border: 2px solid $light;
+                    background: $lightLight;
+                    filter: drop-shadow(0px 0px 2px $light);
+                }
+
+                &.Neutral {
+                    border: 2px solid $neutral;
+                    background: $neutralLight;
+                    filter: drop-shadow(0px 0px 2px $neutral);
+                }
+
+                &.Physic {
+                    border: 2px solid $physic;
+                    background: $physicLight;
+                    filter: drop-shadow(0px 0px 2px $physic);
+                }
+
+                &.Water {
+                    border: 2px solid $water;
+                    background: $waterLight;
+                    filter: drop-shadow(0px 0px 2px $water);
+                }
+
+                &.Wind {
+                    border: 2px solid $wind;
+                    background: $windLight;
+                    filter: drop-shadow(0px 0px 2px $wind);
+                }
+            }
+
+        }
+    }
+
+    .container_info_effect {
+        display: flex;
+        gap: 5px;
+        filter: drop-shadow(0px 0px 5px cyan);
+
+        @include break800px {
+            margin-top: 3px;
+            gap: 1px;
+        }
+
+        @include break600hpx {
+            margin-top: 3px;
+            gap: 1px;
+        }
+
+        .info_effect {
+            font-size: 6px;
+
+            @include break800px {
+                font-size: 4px;
+            }
+
+            @include break600hpx {
+                font-size: 4px;
+            }
+        }
+    }
+}

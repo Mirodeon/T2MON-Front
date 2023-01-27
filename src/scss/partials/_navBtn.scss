@@ -1,0 +1,113 @@
+.nav_btn {
+    position: relative;
+    padding: 10px 0px;
+    min-width: 100px;
+    font-size: 10px;
+    color: cyan;
+    border-radius: 4px;
+    text-shadow: 0 0 5px cyan;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    z-index: 1;
+    box-sizing: border-box;
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: cyan;
+        z-index: -1;
+        transform: scale(0);
+        transition: 0.5s;
+        box-sizing: border-box;
+    }
+
+    span {
+        position: absolute;
+        background: cyan;
+        pointer-events: none;
+        border-radius: 1px;
+        box-shadow: 0 0 2px cyan, 0 0 4px cyan, 0 0 6px cyan;
+        transition: 0.5s ease-in-out;
+        transition-delay: 0.25s;
+        box-sizing: border-box;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            width: 4px;
+            height: 2px;
+            transform: translateX(0);
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            width: 2px;
+            height: 4px;
+            transform: translateY(0);
+        }
+
+        &:nth-child(1) {
+            top: calc(50% - 1px);
+            left: -5px;
+            transform-origin: left;
+        }
+
+        &:nth-child(3) {
+            top: calc(50% - 1px);
+            right: -5px;
+            transform-origin: right;
+        }
+
+        &:nth-child(2) {
+            left: calc(50% - 1px);
+            top: -5px;
+            transform-origin: top;
+        }
+
+        &:nth-child(4) {
+            left: calc(50% - 1px);
+            bottom: -5px;
+            transform-origin: bottom;
+        }
+    }
+
+    &:hover,
+    &.currentLocation,
+    &.active {
+        color: black;
+        box-shadow: 0 0 0px cyan;
+        cursor: pointer;
+
+        &::before {
+            transform: scale(1);
+            transition-delay: 0.5s;
+            box-shadow: 0 0 2px cyan, 0 0 6px cyan, 0 0 12px cyan;
+        }
+
+        span {
+            opacity: 0;
+            transition-delay: 0s;
+
+            &:nth-child(1) {
+                left: 50%;
+            }
+
+            &:nth-child(3) {
+                right: 50%;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+            }
+
+            &:nth-child(4) {
+                bottom: 50%;
+            }
+        }
+    }
+}

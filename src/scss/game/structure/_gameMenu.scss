@@ -1,0 +1,59 @@
+.container_game_menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40%;
+    height: calc(60vh - 108px);
+    background: radial-gradient(circle, transparent, black 60%);
+    box-sizing: border-box;
+    z-index: 2;
+    border-radius: 40px;
+    transition: all 1.5s ease-out 0s;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: calc(5vh - 9px) 0px;
+    transform: translateX(100%);
+
+    @include break800px {
+        border-radius: 40px;
+        width: 100%;
+    }
+
+    @include break600hpx {
+        height: calc(60vh - 81px);
+        padding: 5px 0px;
+    }
+
+    .item_game_menu,
+    .item_game_param {
+        margin: 0 auto;
+        width: 50%;
+        max-width: 130px;
+        padding: 10px 0px;
+        filter: drop-shadow(0px 0px 5px cyan);
+        box-sizing: border-box;
+        background-color: black;
+        border-radius: 30px;
+        color: azure;
+        text-align: center;
+        transition: all 0.3s ease-in 0s;
+
+        @include break600hpx {
+            padding: 5px 0px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            filter: drop-shadow(0px 0px 10px cyan);
+            transform: scale(1.1);
+        }
+    }
+
+    &.active {
+        filter: drop-shadow(0px 0px 10px cyan);
+        transform: translateX(0%);
+    }
+}

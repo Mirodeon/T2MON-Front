@@ -1,0 +1,284 @@
+.container_pet_store {
+    height: calc(28vh - 50.4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+    @include break600hpx {
+        height: calc(28vh - 37.8px);
+    }
+
+    .container_arrow_pet_store {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 10px;
+
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+
+            .arrow_pet_store {
+                filter: drop-shadow(0px 0px 10px cyan);
+
+                &.prev {
+                    border-right: 24px solid cyan;
+                }
+
+                &.next {
+                    border-left: 24px solid cyan;
+                }
+            }
+        }
+
+        .arrow_pet_store {
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            &.prev {
+                border-right: 24px solid rgba(0, 255, 255, 0.5);
+            }
+
+            &.next {
+                border-left: 24px solid rgba(0, 255, 255, 0.5);
+
+            }
+        }
+    }
+
+    .container_info_pet_store {
+        box-sizing: border-box;
+        width: 50%;
+        height: 120px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+
+        @include break800px {
+            width: 70%;
+            height: 75px;
+        }
+
+        @include break600hpx {
+            height: 50px;
+        }
+
+        .container_pres_pet_store {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            @include break800px {
+                gap: 0px;
+            }
+
+
+            .container_img_pet_store {
+                width: 50px;
+                height: 50px;
+                box-sizing: border-box;
+                background: black;
+                border-radius: 50%;
+                filter: drop-shadow(0px 0px 5px cyan);
+                position: relative;
+
+                @include break800px {
+                    transform: scale(0.7);
+                }
+
+                .img_pet_store {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0px;
+                    filter: drop-shadow(0px 0px 5px cyan);
+                }
+            }
+
+            .name_pet_store {
+                filter: drop-shadow(0px 0px 5px cyan);
+                font-size: 16px;
+
+                @include break800px {
+                    font-size: 10px;
+                }
+
+                .lvl_pet_store {
+                    font-size: 10px;
+
+                    @include break800px {
+                        font-size: 6px;
+                    }
+                }
+            }
+
+            .container_type_pet_store {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .type_pet_store {
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    width: 20px;
+                    height: 20px;
+
+                    @include break800px {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    @include break600hpx {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    &.Darkness {
+                        border: 2px solid $darkness;
+                        background: $darknessLight;
+                        filter: drop-shadow(0px 0px 2px $darkness);
+                    }
+
+                    &.Earth {
+                        border: 2px solid $earth;
+                        background: $earthLight;
+                        filter: drop-shadow(0px 0px 2px $earth);
+                    }
+
+                    &.Fire {
+                        border: 2px solid $fire;
+                        background: $fireLight;
+                        filter: drop-shadow(0px 0px 2px $fire);
+                    }
+
+                    &.Ice {
+                        border: 2px solid $ice;
+                        background: $iceLight;
+                        filter: drop-shadow(0px 0px 2px $ice);
+                    }
+
+                    &.Light {
+                        border: 2px solid $light;
+                        background: $lightLight;
+                        filter: drop-shadow(0px 0px 2px $light);
+                    }
+
+                    &.Neutral {
+                        border: 2px solid $neutral;
+                        background: $neutralLight;
+                        filter: drop-shadow(0px 0px 2px $neutral);
+                    }
+
+                    &.Physic {
+                        border: 2px solid $physic;
+                        background: $physicLight;
+                        filter: drop-shadow(0px 0px 2px $physic);
+                    }
+
+                    &.Water {
+                        border: 2px solid $water;
+                        background: $waterLight;
+                        filter: drop-shadow(0px 0px 2px $water);
+                    }
+
+                    &.Wind {
+                        border: 2px solid $wind;
+                        background: $windLight;
+                        filter: drop-shadow(0px 0px 2px $wind);
+                    }
+                }
+            }
+        }
+
+        .container_txt_pet_store {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            padding: 10px 50px 10px 0px;
+
+            @include break800px {
+                padding: 0px 20px 0px 0px;
+                gap: 2px;
+            }
+
+            .container_stat_mon {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .stat_mon {
+                    font-size: 12px;
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include break800px {
+                        font-size: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container_confirm_pet_store {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        @include break800px {
+            gap: 5px;
+        }
+
+        .confirm_pet_store {
+            box-sizing: border-box;
+            min-width: 110px;
+            padding: 8px 20px;
+            font-size: 16px;
+            border: 3px solid rgba(0, 255, 255, 0.5);
+            border-radius: 15px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            background: rgba(0, 0, 0, 0.5);
+            color: black;
+            transition: all 0.3s ease-in 0s;
+            text-align: center;
+
+            @include break800px {
+                min-width: 30%;
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 10px cyan);
+            }
+        }
+    }
+}

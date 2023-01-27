@@ -1,0 +1,32 @@
+.container_confirm_bag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    font-size: 10px;
+    box-sizing: border-box;
+    background: black;
+    border: 5px solid rgb(190, 130, 0);
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 5px rgb(190, 130, 0));
+    display: flex;
+    flex-direction: column;
+    animation: 0.7s ease-in 0s 1 opacit;
+    padding: 10px 10px;
+    z-index: 1;
+
+    .item_confirm_bag {
+        text-align: center;
+        padding: 5px 0px;
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            filter: drop-shadow(0px 0px 10px rgb(190, 130, 0));
+            transform: scale(1.1);
+            background: rgb(190, 130, 0);
+            border-radius: 5px;
+        }
+    }
+}

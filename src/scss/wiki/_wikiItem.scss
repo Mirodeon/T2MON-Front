@@ -1,0 +1,29 @@
+.txt_article_wiki {
+    .container_bag_start {
+        height: 120px;
+        margin-bottom: 20px;
+
+        .container_details_bag_start {
+            min-width: 375px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(0px 0px 5px cyan);
+
+            @include break800px {
+                min-width: initial;
+            }
+
+            .header_bag_start {
+                .container_img_bag_start {
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            .description_bag_start {
+                @include break800px {
+                    padding: 20px 20px 20px 0;
+                }
+            }
+        }
+    }
+}

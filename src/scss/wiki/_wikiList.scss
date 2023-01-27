@@ -1,0 +1,123 @@
+.txt_article_wiki {
+    ul {
+        margin: 15px 25px;
+
+        &.list_type {
+            box-sizing: border-box;
+            border: solid 2px cyan;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 120px;
+            margin: 15px auto;
+
+            @include break800px {
+                height: initial;
+                gap: 10px;
+                padding: 10px 0px;
+            }
+
+            li {
+                min-height: 25%;
+                align-items: center;
+            }
+        }
+
+        &.list_txt {
+            gap: 10px;
+
+            li {
+                @include break800px {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+                .header_item_list {
+                    @include break800px {
+                        width: initial;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        li {
+            display: flex;
+
+            .header_item_list {
+                width: 15%;
+            }
+
+            .header_type_list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+
+                .circle_type {
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    width: 20px;
+                    height: 20px;
+
+                    &.Darkness {
+                        border: 2px solid $darkness;
+                        background: $darknessLight;
+                        filter: drop-shadow(0px 0px 2px $darkness);
+                    }
+
+                    &.Earth {
+                        border: 2px solid $earth;
+                        background: $earthLight;
+                        filter: drop-shadow(0px 0px 2px $earth);
+                    }
+
+                    &.Fire {
+                        border: 2px solid $fire;
+                        background: $fireLight;
+                        filter: drop-shadow(0px 0px 2px $fire);
+                    }
+
+                    &.Ice {
+                        border: 2px solid $ice;
+                        background: $iceLight;
+                        filter: drop-shadow(0px 0px 2px $ice);
+                    }
+
+                    &.Light {
+                        border: 2px solid $light;
+                        background: $lightLight;
+                        filter: drop-shadow(0px 0px 2px $light);
+                    }
+
+                    &.Neutral {
+                        border: 2px solid $neutral;
+                        background: $neutralLight;
+                        filter: drop-shadow(0px 0px 2px $neutral);
+                    }
+
+                    &.Physic {
+                        border: 2px solid $physic;
+                        background: $physicLight;
+                        filter: drop-shadow(0px 0px 2px $physic);
+                    }
+
+                    &.Water {
+                        border: 2px solid $water;
+                        background: $waterLight;
+                        filter: drop-shadow(0px 0px 2px $water);
+                    }
+
+                    &.Wind {
+                        border: 2px solid $wind;
+                        background: $windLight;
+                        filter: drop-shadow(0px 0px 2px $wind);
+                    }
+                }
+            }
+        }
+    }
+}

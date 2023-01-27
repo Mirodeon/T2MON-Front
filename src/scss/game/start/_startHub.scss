@@ -1,0 +1,159 @@
+.container_start_hub {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(60vh - 108px);
+    background: radial-gradient(ellipse, transparent, black 60%);
+    box-sizing: border-box;
+    z-index: 5;
+    filter: drop-shadow(0px 0px 10px cyan);
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*padding: 40px 40px;*/
+    gap: calc(2.5vh - 4.5px);
+    flex-direction: column;
+
+    @include break600hpx {
+        height: calc(60vh - 81px);
+        gap: calc(2.5vh - 3.375px);
+    }
+
+    &.fade_out {
+        transition: opacity 4.8s ease-in 0s;
+        opacity: 0;
+    }
+
+    .return_game_start {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        filter: drop-shadow(0px 0px 5px cyan);
+        transition: all 0.3s ease-in 0s;
+        opacity: 0.5;
+
+        @include break800px {
+            display: none;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            filter: drop-shadow(0px 0px 10px cyan);
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    .header_start_hub {
+        box-sizing: border-box;
+        width: 50%;
+        height: 90px;
+        background: rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0px 0px 5px cyan);
+        border-radius: 25px;
+        border: 5px solid black;
+        color: black;
+        padding: 10px 15px;
+        font-size: 16px;
+        line-height: 25px;
+        @include scrollBar;
+
+        @include break800px {
+            width: 80%;
+            font-size: 12px;
+            line-height: normal;
+            border: 2px solid black;
+        }
+
+        @include break600hpx {
+            height: 45px;
+            font-size: 8px;
+            line-height: normal;
+            border: 2px solid black;
+        }
+
+        .blink {
+            animation: 1.5s ease-out 0s infinite opacit;
+        }
+    }
+
+    .confirm_start_hub {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-size: 24px;
+        border: 3px solid rgba(0, 255, 255, 0.5);
+        border-radius: 15px;
+        filter: drop-shadow(0px 0px 5px cyan);
+        background: rgba(0, 0, 0, 0.5);
+        color: black;
+        /*margin-top: 80px;*/
+        transition: all 0.3s ease-in 0s;
+
+        @include break800px {
+            font-size: 20px;
+        }
+
+        @include break600hpx {
+            font-size: 16px;
+        }
+
+        &:hover,
+        &.active {
+            cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            transform: scale(1.1);
+            filter: drop-shadow(0px 0px 10px cyan);
+        }
+    }
+
+    .container_confirm_start {
+        /*margin-top: 80px;*/
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        @include break800px {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        @include break600hpx {
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .item_confirm_start {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: 3px solid rgba(0, 255, 255, 0.5);
+            border-radius: 15px;
+            filter: drop-shadow(0px 0px 5px cyan);
+            background: rgba(0, 0, 0, 0.5);
+            color: black;
+            min-width: 135px;
+            transition: all 0.3s ease-in 0s;
+            text-align: center;
+
+            @include break800px {
+                font-size: 20px;
+            }
+
+            @include break600hpx {
+                font-size: 16px;
+                min-width: 30%;
+            }
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 10px cyan);
+            }
+        }
+    }
+}

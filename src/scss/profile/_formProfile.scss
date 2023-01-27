@@ -1,0 +1,7 @@
+.container_profile.form_profile {
+    @include break600hpx {
+        display: flex;
+        flex-direction: row;
+        padding: calc(5vh - 9px) 10px;
+    }
+}

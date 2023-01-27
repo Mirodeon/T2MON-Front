@@ -1,0 +1,15 @@
+@mixin break800px {
+    @media screen and (max-width: 800px) {
+        @content
+    }
+
+    ;
+}
+
+@mixin break600hpx {
+    @media screen and (max-height: 600px) {
+        @content
+    }
+
+    ;
+}

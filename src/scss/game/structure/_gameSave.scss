@@ -1,0 +1,82 @@
+.container_save {
+    box-sizing: border-box;
+    width: 85%;
+    max-width: 630px;
+    height: calc(15vh - 27px);
+    max-height: 90px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 0px 5px cyan);
+    border-radius: 25px;
+    margin: 0 auto;
+    border: 5px solid black;
+    display: flex;
+    animation: 0.7s ease-in 0s 1 opacit;
+    z-index: 4;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(5vh - 9px);
+    justify-content: space-between;
+
+    @include break800px {
+        height: calc(30vh - 54px);
+        max-height: none;
+    }
+
+    @include break600hpx {
+        height: calc(50vh - 67.5px);
+        max-height: none;
+    }
+
+    .txt_save {
+        box-sizing: border-box;
+        color: black;
+        padding: 10px 10px;
+        font-size: 18px;
+
+        .blink {
+            animation: 1.5s ease-out 0s infinite opacit;
+        }
+    }
+
+    .container_interact_save {
+        width: 25%;
+        box-sizing: border-box;
+        border-left: 5px solid black;
+        border-radius: 25px 0px 0px 25px;
+        display: flex;
+        flex-direction: column;
+        filter: drop-shadow(0px 0px 5px cyan);
+        padding: 10px 15px;
+        align-items: center;
+        justify-content: space-around;
+
+        @include break800px {
+            min-width: 50%;
+        }
+
+        @include break600hpx {
+            width: 50%;
+        }
+
+        .item_interact_save {
+            width: 75%;
+            /*height: 50%;*/
+            text-align: center;
+            padding: 6px 0px;
+            font-size: 18px;
+            box-sizing: border-box;
+            color: black;
+            font-weight: bold;
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+                filter: drop-shadow(0px 0px 10px cyan);
+                transform: scale(1.1);
+                background: cyan;
+                border-radius: 5px;
+            }
+        }
+    }
+}

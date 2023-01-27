@@ -1,0 +1,134 @@
+@keyframes nextlight {
+    from {
+        filter: drop-shadow(0px 0px 0px cyan);
+    }
+
+    to {
+        filter: drop-shadow(0px 0px 5px cyan);
+    }
+}
+
+@keyframes navlight {
+    from {
+        filter: none;
+    }
+
+    to {
+        filter: drop-shadow(0px 0px 0px cyan);
+    }
+}
+
+@keyframes spotlight {
+    from {
+        filter: drop-shadow(0px 0px -1px cyan);
+    }
+
+    to {
+        filter: drop-shadow(0px 0px 1px cyan);
+    }
+}
+
+@keyframes mov {
+    from {
+        top: -700px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes opacit {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes waving {
+    from {}
+
+    to {
+        background-position: -25px -25px;
+    }
+}
+
+@keyframes movFromLeft {
+    from {
+        left: -700px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes movToLeft {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -700px;
+    }
+}
+
+@keyframes movFromBottom {
+    from {
+        bottom: -700px;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}
+
+@keyframes rotateSpell {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes turnOn {
+    0% {
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    60% {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    90% {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,0 +1,104 @@
+.container_item_gameList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 80%;
+    height: calc(18vh - 32.4px);
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 0px 5px cyan);
+    box-sizing: border-box;
+    border-radius: 30px;
+    animation: 0.7s cubic-bezier(1, 0, 1, 1) 0s 1 opacit;
+
+    @include break800px {
+        padding: 10px 10px;
+        max-width: 250px;
+        width: 90%;
+        border-radius: 20px;
+        height: calc(15vh - 27px);
+    }
+
+    @include break600hpx {
+        height: calc(15vh - 20.25px);
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    .container_text_item_gameList {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .text_item_gameList {
+            font-size: 16px;
+
+            @include break800px {
+                font-size: 10px;
+            }
+
+            @include break600hpx {
+                font-size: 8px;
+            }
+        }
+    }
+
+    .container_no_item_gameList {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .no_item_gameList {
+            font-size: 16px;
+
+            @include break800px {
+                font-size: 10px;
+            }
+
+            @include break600hpx {
+                font-size: 8px;
+            }
+        }
+    }
+
+    .container_btn_item_gameList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        @include break800px {
+            gap: 0;
+        }
+
+        @include break600hpx {
+            gap: 0;
+        }
+
+        .btn_item_gameList {
+            @include break800px {
+                min-width: 50px;
+            }
+
+            @include break600hpx {
+                padding: 2px 0;
+            }
+
+            span {
+
+                &:nth-child(2),
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                filter: drop-shadow(0px 0px 10px cyan);
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+            }
+        }
+    }
+}

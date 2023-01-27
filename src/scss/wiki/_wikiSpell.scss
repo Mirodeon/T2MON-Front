@@ -1,0 +1,211 @@
+.txt_article_wiki {
+    .container_wikispell {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container_arrow_wikispell {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 10px;
+
+            &.prev {
+                left: 10px;
+            }
+
+            &.next {
+                right: 10px;
+            }
+
+            &:hover,
+            &.active {
+                cursor: pointer;
+
+                .arrow_wikispell {
+                    filter: drop-shadow(0px 0px 10px cyan);
+
+                    &.prev {
+                        border-right: 24px solid cyan;
+                    }
+
+                    &.next {
+                        border-left: 24px solid cyan;
+                    }
+                }
+            }
+
+            .arrow_wikispell {
+                border-radius: 50%;
+                width: 0;
+                height: 0;
+                border-top: 16px solid transparent;
+                border-bottom: 16px solid transparent;
+                filter: drop-shadow(0px 0px 5px cyan);
+
+                &.prev {
+                    border-right: 24px solid rgba(0, 255, 255, 0.5);
+                }
+
+                &.next {
+                    border-left: 24px solid rgba(0, 255, 255, 0.5);
+
+                }
+            }
+        }
+
+        .container_spell_wiki {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            min-width: 375px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(0px 0px 5px cyan);
+            padding: 10px 40px 10px 40px;
+            border-radius: 40px;
+
+            @include break800px {
+                min-width: initial;
+                width: 80%;
+                box-sizing: border-box;
+                padding: 0 0;
+                height: 50px;
+            }
+
+            .container_detail_spell {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                margin-bottom: 10px;
+
+                .name_spell {
+                    font-size: 10px;
+                    filter: drop-shadow(0px 0px 5px cyan);
+                }
+
+                .container_info_spell {
+                    display: flex;
+                    font-size: 8px;
+                    text-align: center;
+                    gap: 3px;
+
+                    .mana_spell {
+                        box-sizing: border-box;
+                        background: rgba(0, 0, 190, 0.3);
+                        border: 2px solid rgb(0, 0, 190);
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        padding: 4px 0px;
+                        filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+                    }
+
+                    .effect_spell {
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                        width: 20px;
+                        height: 20px;
+                        padding: 4px 0px;
+
+                        &.PV {
+                            border: 2px solid rgb(175, 0, 0);
+                            background: rgb(175, 0, 0, 0.3);
+                            filter: drop-shadow(0px 0px 2px rgb(175, 0, 0));
+                        }
+
+                        &.Mana {
+                            border: 2px solid rgb(0, 0, 190);
+                            background: rgba(0, 0, 190, 0.3);
+                            filter: drop-shadow(0px 0px 2px rgb(0, 0, 190));
+                        }
+
+                        &.PVandMana {
+                            border: 2px solid rgba(128, 0, 128);
+                            background: rgba(128, 0, 128, 0.3);
+                            filter: drop-shadow(0px 0px 2px rgba(128, 0, 128));
+                        }
+                    }
+
+                    .type_spell {
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                        width: 20px;
+                        height: 20px;
+                        padding: 4px 0px;
+
+                        &.Darkness {
+                            border: 2px solid $darkness;
+                            background: $darknessLight;
+                            filter: drop-shadow(0px 0px 2px $darkness);
+                        }
+
+                        &.Earth {
+                            border: 2px solid $earth;
+                            background: $earthLight;
+                            filter: drop-shadow(0px 0px 2px $earth);
+                        }
+
+                        &.Fire {
+                            border: 2px solid $fire;
+                            background: $fireLight;
+                            filter: drop-shadow(0px 0px 2px $fire);
+                        }
+
+                        &.Ice {
+                            border: 2px solid $ice;
+                            background: $iceLight;
+                            filter: drop-shadow(0px 0px 2px $ice);
+                        }
+
+                        &.Light {
+                            border: 2px solid $light;
+                            background: $lightLight;
+                            filter: drop-shadow(0px 0px 2px $light);
+                        }
+
+                        &.Neutral {
+                            border: 2px solid $neutral;
+                            background: $neutralLight;
+                            filter: drop-shadow(0px 0px 2px $neutral);
+                        }
+
+                        &.Physic {
+                            border: 2px solid $physic;
+                            background: $physicLight;
+                            filter: drop-shadow(0px 0px 2px $physic);
+                        }
+
+                        &.Water {
+                            border: 2px solid $water;
+                            background: $waterLight;
+                            filter: drop-shadow(0px 0px 2px $water);
+                        }
+
+                        &.Wind {
+                            border: 2px solid $wind;
+                            background: $windLight;
+                            filter: drop-shadow(0px 0px 2px $wind);
+                        }
+                    }
+                }
+            }
+
+            .container_info_effect {
+                display: flex;
+                gap: 5px;
+                filter: drop-shadow(0px 0px 5px cyan);
+
+                .info_effect {
+                    font-size: 6px;
+                }
+            }
+        }
+
+
+    }
+}

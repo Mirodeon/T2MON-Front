@@ -1,0 +1,194 @@
+.container_pad {
+    box-sizing: border-box;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+    animation: 0.7s ease-in 0s 1 opacit;
+    height: calc(20vh - 36px);
+    width: 70%;
+    max-width: 600px;
+    gap: 15px;
+
+    @include break600hpx {
+        height: calc(20vh - 27px);
+    }
+
+    .pad {
+        position: relative;
+        width: calc(20vh - 36px);
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: calc(5vh - 9px);
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+
+        @include break600hpx {
+            width: calc(20vh - 27px);
+        }
+
+        .container_arrow {
+            position: absolute;
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+
+                .arrow {
+                    filter: drop-shadow(0px 0px 10px cyan);
+
+                    &.up {
+                        border-bottom-color: cyan;
+                    }
+
+                    &.down {
+                        border-top-color: cyan;
+                    }
+
+                    &.left {
+                        border-right-color: cyan;
+                    }
+
+                    &.right {
+                        border-left-color: cyan;
+                    }
+                }
+            }
+
+            &.up_pad {
+                left: 50%;
+                transform: translateX(-50%);
+                top: calc(1vh - 1.8px);
+
+                @include break600hpx {
+                    top: calc(1vh - 1.35px);
+                }
+            }
+
+            &.down_pad {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: calc(1vh - 1.8px);
+
+                @include break600hpx {
+                    bottom: calc(1vh - 1.35px);
+                }
+            }
+
+            &.left_pad {
+                top: 50%;
+                transform: translateY(-50%);
+                left: calc(1vh - 1.8px);
+
+                @include break600hpx {
+                    left: calc(1vh - 1.35px);
+                }
+            }
+
+            &.right_pad {
+                top: 50%;
+                transform: translateY(-50%);
+                right: calc(1vh - 1.8px);
+
+                @include break600hpx {
+                    right: calc(1vh - 1.35px);
+                }
+            }
+
+            .arrow {
+                width: 0;
+                height: 0;
+                filter: drop-shadow(0px 0px 5px cyan);
+                border-radius: 25%;
+
+                &.up {
+                    border-left: calc(3.5vh - 6.3px) solid transparent;
+                    border-right: calc(3.5vh - 6.3px) solid transparent;
+                    border-bottom: calc(5vh - 9px) solid rgba(0, 255, 255, 0.5);
+
+                    @include break600hpx {
+                        border-left: calc(3.5vh - 4.725px) solid transparent;
+                        border-right: calc(3.5vh - 4.725px) solid transparent;
+                        border-bottom: calc(5vh - 6.75px) solid rgba(0, 255, 255, 0.5);
+                    }
+                }
+
+                &.down {
+                    border-left: calc(3.5vh - 6.3px) solid transparent;
+                    border-right: calc(3.5vh - 6.3px) solid transparent;
+                    border-top: calc(5vh - 9px) solid rgba(0, 255, 255, 0.5);
+
+                    @include break600hpx {
+                        border-left: calc(3.5vh - 4.725px) solid transparent;
+                        border-right: calc(3.5vh - 4.725px) solid transparent;
+                        border-top: calc(5vh - 6.75px) solid rgba(0, 255, 255, 0.5);
+                    }
+                }
+
+                &.left {
+                    border-top: calc(3.5vh - 6.3px) solid transparent;
+                    border-bottom: calc(3.5vh - 6.3px) solid transparent;
+                    border-right: calc(5vh - 9px) solid rgba(0, 255, 255, 0.5);
+
+                    @include break600hpx {
+                        border-top: calc(3.5vh - 4.725px) solid transparent;
+                        border-bottom: calc(3.5vh - 4.725px) solid transparent;
+                        border-right: calc(5vh - 6.75px) solid rgba(0, 255, 255, 0.5);
+                    }
+                }
+
+                &.right {
+                    border-top: calc(3.5vh - 6.3px) solid transparent;
+                    border-bottom: calc(3.5vh - 6.3px) solid transparent;
+                    border-left: calc(5vh - 9px) solid rgba(0, 255, 255, 0.5);
+
+                    @include break600hpx {
+                        border-top: calc(3.5vh - 4.725px) solid transparent;
+                        border-bottom: calc(3.5vh - 4.725px) solid transparent;
+                        border-left: calc(5vh - 6.75px) solid rgba(0, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+
+        .container_circle {
+            position: absolute;
+
+            &.action_pad {
+                left: 30%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+            }
+
+            &.back_pad {
+                right: 30%;
+                bottom: 60%;
+                transform: translate(50%, 50%);
+            }
+
+            &:hover,
+            &.active {
+                cursor: url('../img/cursor/lumosPointer.png'), pointer;
+
+                .circle {
+                    background: cyan;
+                    filter: drop-shadow(0px 0px 10px cyan);
+                }
+            }
+
+
+
+            .circle {
+                height: calc(6vh - 10.8px);
+                width: calc(6vh - 10.8px);
+                border-radius: 50%;
+                background: rgba(0, 255, 255, 0.5);
+                filter: drop-shadow(0px 0px 5px cyan);
+
+                @include break600hpx {
+                    height: calc(6vh - 8.1px);
+                    width: calc(6vh - 8.1px);
+                }
+            }
+        }
+    }
+}

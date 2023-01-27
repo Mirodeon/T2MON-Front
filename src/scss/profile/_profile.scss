@@ -1,0 +1,81 @@
+@import "cube";
+
+.container_page_profile {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: cyan;
+    text-shadow: 0 0 5px cyan;
+
+    .container_profile {
+        width: 80%;
+        max-width: 565px;
+        min-height: calc(100vh - 180px);
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0px 0px 5px cyan);
+        cursor: url('../img/cursor/lumos.png'), auto;
+        border-radius: 40px;
+        animation: 1.5s ease-out 0s 1 turnOn;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: calc(5vh - 9px) 0;
+        justify-content: space-around;
+
+        @include break600hpx {
+            min-height: calc(100vh - 135px);
+        }
+
+        .container_welcome_profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            min-height: calc(35vh - 63px);
+            gap: 10px;
+
+            @include break600hpx {
+                min-height: calc(35vh - 47.25px);
+            }
+
+            .welcome_profile {
+                font-size: 24px;
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 0 0 5px cyan;
+                animation: 0.7s cubic-bezier(1, 0, 1, 1) 0s 1 opacit;
+
+                @include break800px {
+                    font-size: 20px;
+                }
+
+                @include break600hpx {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .container_gameList {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: calc(40vh - 72px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include break800px {
+                min-height: calc(35vh - 63px);
+            }
+
+            @include break600hpx {
+                min-height: calc(35vh - 47.25px);
+            }
+        }
+    }
+}
+
+@import "formProfile";
