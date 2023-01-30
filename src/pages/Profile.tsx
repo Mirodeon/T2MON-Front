@@ -37,20 +37,12 @@ const Profile = () => {
       }
       content={
         <div className="container_gameList">
-          {fetchSave ? (
-            <GameList
-              data={fetchSave}
-              available={false}
-              setReload={setReload}
-              reload={reload}
-            />
-          ) : (
-            <div className="container_item_gameList">
-              <div className="container_no_item_gameList">
-                <p className="no_item_gameList">Loading...</p>
-              </div>
-            </div>
-          )}
+          <GameList
+            data={fetchSave}
+            available={false}
+            setReload={setReload}
+            reload={reload}
+          />
         </div>
       }
       form={false}

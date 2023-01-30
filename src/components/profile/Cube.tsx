@@ -1,8 +1,11 @@
 import React from "react";
 
-const Cube = () => {
+type CubeProps = {
+  status: string;
+};
+const Cube = ({ status }: CubeProps) => {
   return (
-    <div className="container_cube">
+    <div className={"container_cube" + status}>
       <div className="cube">
         <div className="top"></div>
         <div className="face_cube">

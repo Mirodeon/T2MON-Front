@@ -1,0 +1,26 @@
+.container_cube.fail_check {
+    .cube {
+        .top {
+            background: radial-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0, 0.1) 100%);
+
+            &::before {
+                background: rgba(255, 0, 0, 0.5);
+                box-shadow: 0 0 20px rgb(255 0 0 / 20%), 0 0 40px rgb(255 0 0 / 40%),
+                    0 0 40px rgb(255 0 0 / 60%), 0 0 40px rgb(255 0 0/ 80%),
+                    0 0 40px rgb(255, 0, 0);
+
+                @include break600hpx {
+                    box-shadow: 0 0 00px rgb(255 0 0 / 20%), 0 0 20px rgb(255 0 0 / 40%),
+                        0 0 20px rgb(255 0 0 / 60%), 0 0 20px rgb(255 0 0/ 80%),
+                        0 0 20px rgb(255, 0, 0);
+                }
+            }
+        }
+
+        .face_cube {
+            span {
+                background: linear-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0, 0.5) 50%, rgb(255, 0, 0) 100%);
+            }
+        }
+    }
+}
