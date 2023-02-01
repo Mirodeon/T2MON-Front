@@ -14,6 +14,8 @@ const Status = ({ status, classNameStatus }: StatusProps) => {
             server is starting
             <br />
             please wait
+            <br />
+            (up to 30s)
           </>
         ) : status === "failed" ? (
           <>
