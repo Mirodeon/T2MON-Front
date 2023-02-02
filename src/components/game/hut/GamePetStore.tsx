@@ -85,7 +85,7 @@ const GamePetStore = ({
 
   useNonInitialEffect(() => {
     if (controll.e) {
-      setTextId({ id: 1 });
+      setTextId({ id: 2 });
       setInteractHut("menu");
     }
     if (controll.a) {
