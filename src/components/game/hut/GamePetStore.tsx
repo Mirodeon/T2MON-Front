@@ -226,7 +226,7 @@ const GamePetStore = ({
         <div
           className="confirm_pet_store"
           onClick={() => {
-            setTextId({ id: 1 });
+            setTextId({ id: 2 });
             setInteractHut("menu");
           }}
         >
