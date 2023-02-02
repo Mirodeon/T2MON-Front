@@ -293,6 +293,30 @@
   transition-delay: 0.5s;
   box-shadow: 0 0 2px cyan, 0 0 6px cyan, 0 0 12px cyan;
 }
+.nav_btn:hover.wait_request, .nav_btn.currentLocation.wait_request, .nav_btn.active.wait_request {
+  text-shadow: 0 0 5px rgb(255, 130, 0);
+  box-shadow: 0 0 0px rgb(255, 130, 0);
+}
+.nav_btn:hover.wait_request::before, .nav_btn.currentLocation.wait_request::before, .nav_btn.active.wait_request::before {
+  background: rgb(255, 130, 0);
+  box-shadow: 0 0 2px rgb(255, 130, 0), 0 0 6px rgb(255, 130, 0), 0 0 12px rgb(255, 130, 0);
+}
+.nav_btn:hover.success_request, .nav_btn.currentLocation.success_request, .nav_btn.active.success_request {
+  text-shadow: 0 0 5px rgb(0, 255, 0);
+  box-shadow: 0 0 0px rgb(0, 255, 0);
+}
+.nav_btn:hover.success_request::before, .nav_btn.currentLocation.success_request::before, .nav_btn.active.success_request::before {
+  background: rgb(0, 255, 0);
+  box-shadow: 0 0 2px rgb(0, 255, 0), 0 0 6px rgb(0, 255, 0), 0 0 12px rgb(0, 255, 0);
+}
+.nav_btn:hover.failed_request, .nav_btn.currentLocation.failed_request, .nav_btn.active.failed_request {
+  text-shadow: 0 0 5px rgb(255, 0, 0);
+  box-shadow: 0 0 0px rgb(255, 0, 0);
+}
+.nav_btn:hover.failed_request::before, .nav_btn.currentLocation.failed_request::before, .nav_btn.active.failed_request::before {
+  background: rgb(255, 0, 0);
+  box-shadow: 0 0 2px rgb(255, 0, 0), 0 0 6px rgb(255, 0, 0), 0 0 12px rgb(255, 0, 0);
+}
 .nav_btn:hover span, .nav_btn.currentLocation span, .nav_btn.active span {
   opacity: 0;
   transition-delay: 0s;

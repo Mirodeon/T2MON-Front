@@ -89,6 +89,36 @@
             box-shadow: 0 0 2px cyan, 0 0 6px cyan, 0 0 12px cyan;
         }
 
+        &.wait_request {
+            text-shadow: 0 0 5px rgb(255, 130, 0);
+            box-shadow: 0 0 0px rgb(255, 130, 0);
+
+            &::before {
+                background: rgb(255, 130, 0);
+                box-shadow: 0 0 2px rgb(255, 130, 0), 0 0 6px rgb(255, 130, 0), 0 0 12px rgb(255, 130, 0);
+            }
+        }
+
+        &.success_request {
+            text-shadow: 0 0 5px rgb(0, 255, 0);
+            box-shadow: 0 0 0px rgb(0, 255, 0);
+
+            &::before {
+                background: rgb(0, 255, 0);
+                box-shadow: 0 0 2px rgb(0, 255, 0), 0 0 6px rgb(0, 255, 0), 0 0 12px rgb(0, 255, 0);
+            }
+        }
+
+        &.failed_request {
+            text-shadow: 0 0 5px rgb(255, 0, 0);
+            box-shadow: 0 0 0px rgb(255, 0, 0);
+
+            &::before {
+                background: rgb(255, 0, 0);
+                box-shadow: 0 0 2px rgb(255, 0, 0), 0 0 6px rgb(255, 0, 0), 0 0 12px rgb(255, 0, 0);
+            }
+        }
+
         span {
             opacity: 0;
             transition-delay: 0s;

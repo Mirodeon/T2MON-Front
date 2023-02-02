@@ -5,29 +5,50 @@ import { useDispatch } from "react-redux";
 import authSlice from "../../store/slices/auth";
 import axiosService from "../../utils/axios";
 import InputForm from "./InputForm";
+import { AxiosResponse } from "axios";
+import useTimeOut from "../../utils/useTimeOut";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [btnClassName, setBtnClassName] = useState("");
+  const [resLogin, setResLogin] = useState<AxiosResponse<any> | null>(null);
   const dispatch = useDispatch();
 
   const handleLogin = (email: string, password: string) => {
+    setBtnClassName(" active wait_request");
     axiosService
       .post(`/auth/login/`, { email, password })
       .then((res) => {
-        dispatch(
-          authSlice.actions.setAuthTokens({
-            token: res.data.access,
-            refreshToken: res.data.refresh,
-          })
-        );
-        dispatch(authSlice.actions.setAccount(res.data.user));
+        setResLogin(res);
+        setBtnClassName(" active success_request");
       })
       .catch((err) => {
         setMessage(err.response.data.detail.toString());
-        setLoading(false);
+        setBtnClassName(" active failed_request");
       });
   };
+
+  useTimeOut(
+    () => {
+      if (resLogin) {
+        dispatch(
+          authSlice.actions.setAuthTokens({
+            token: resLogin.data.access,
+            refreshToken: resLogin.data.refresh,
+          })
+        );
+        dispatch(authSlice.actions.setAccount(resLogin.data.user));
+      } else {
+        setBtnClassName("");
+        setLoading(false);
+      }
+    },
+    btnClassName === " active success_request" ||
+      btnClassName === " active failed_request"
+      ? 2100
+      : null
+  );
 
   const formik = useFormik({
     initialValues: {
@@ -70,7 +91,11 @@ const LoginForm = () => {
           <div className="error_form">{message ? message : null}</div>
         </div>
       </div>
-      <button type="submit" disabled={loading} className="nav_btn">
+      <button
+        type="submit"
+        disabled={loading}
+        className={"nav_btn" + btnClassName}
+      >
         <span></span>
         <span></span>
         <span></span>
